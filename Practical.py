@@ -1,6 +1,5 @@
 from collections import deque
 
-
 class event_manager():
 
     def __init__(self):
@@ -8,12 +7,12 @@ class event_manager():
 
     def add_event(self,event_name):
         self.queue.append(event_name)
-        print(f"Event {event_name} added into queue")
+        print(f"Event {event_name} added into the Diary")
 
     def process_next_event(self):
         if self.queue:
             processing_event = self.queue.popleft()
-            print (f"Processing event :{processing_event}")
+            print (f"Current  event :{processing_event}")
         else:
             print ("No events to process")
 
@@ -39,10 +38,10 @@ def main ():
     while True:
          print("-------EVENT_MANAGER-------")
          print()  
-         print ("1. Add a event")
+         print ("1. Add an event")
          print ("2. Process next event")
          print ("3. Display upcoming event")
-         print ("4. Cancel a event")
+         print ("4. Cancel an event")
          print ("5. Exit")
          print("----------------------------------")
          print()
